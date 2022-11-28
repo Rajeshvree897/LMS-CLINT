@@ -1,16 +1,20 @@
 import React, { useState } from 'react'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Login from '../Pages/Login'
+import Header from './Header'
+import  Dashboard from './Dashboard/DHeader'
 
 const Allroutes = () => {
 
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
+        <Route path="/" element={<Header />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </>
   )
 }

@@ -1,14 +1,11 @@
 import React from 'react';
 import Allroutes from './Components/AllRoutes';
-import Header from './Components/Header'
-import Main from './Components/Main';
+import AppCss from './App.css';
 function App() {
 
   return (
     <>
     <Allroutes />
-   <Header />
-   <Main />
     </>
   );
 

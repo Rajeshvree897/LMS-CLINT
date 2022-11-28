@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { NavLink as Link , Routes, Route, HashRouter} from 'react-router-dom';
+import Main from './Main';
 function Header() {
 
   return (
@@ -46,7 +47,8 @@ function Header() {
       <a href="courses.html" className="get-started-btn">Get Started</a>
 
     </div>
-  </header>
+        </header>
+        <Main />
     </>
   );
 
