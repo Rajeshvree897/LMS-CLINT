@@ -2,6 +2,7 @@
 import React from 'react';
 import { NavLink as Link , Routes, Route, HashRouter} from 'react-router-dom';
 import Sidebar from './Sidebar';
+import ProfilePic from '../../assets/img/profile.png'
 function DHeader() {
 
   return (
@@ -11,7 +12,7 @@ function DHeader() {
 <div className="d-flex align-items-center justify-content-between">
   <a href="index.html" className="logo d-flex align-items-center">
     <img src="assets/img/logo.png" alt="" />
-    <span className="d-none d-lg-block">NiceAdmin</span>
+    <span className="d-none d-lg-block">LMS</span>
   </a>
   <i className="bi bi-list toggle-sidebar-btn"></i>
 </div>
@@ -125,7 +126,7 @@ function DHeader() {
 
         <li className="message-item">
           <a href="#">
-            <img src="assets/img/messages-1.jpg" alt="" className="rounded-circle" />
+            <img src={ProfilePic} alt="" className="rounded-circle" />
             <div>
               <h4>Maria Hudson</h4>
               <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -176,7 +177,7 @@ function DHeader() {
     <li className="nav-item dropdown pe-3">
 
       <a className="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="assets/img/profile-img.jpg" alt="Profile" className="rounded-circle" />
+        <img src={ProfilePic} alt="Profile" className="rounded-circle" />
         <span className="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
       </a>
 
@@ -222,7 +223,7 @@ function DHeader() {
         <li>
           <a className="dropdown-item d-flex align-items-center" href="#">
             <i className="bi bi-box-arrow-right"></i>
-            <span>Sign Out</span>
+            <span><Link className="nav-link logout_btn" to="/signout" >Sign Out</Link></span>
           </a>
         </li>
 
